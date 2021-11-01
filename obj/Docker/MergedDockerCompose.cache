@@ -1,0 +1,56 @@
+services:
+  api-gatewayengine:
+    build:
+      context: .
+      dockerfile: API-GatewayEngine\Dockerfile
+    depends_on:
+      photoengine-api:
+        condition: service_started
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+      peapiurl: http://photoengine-api
+    image: apigatewayengine
+    networks:
+      default: null
+    ports:
+    - mode: ingress
+      target: 80
+      protocol: tcp
+    - mode: ingress
+      target: 80
+      published: 5100
+      protocol: tcp
+    - mode: ingress
+      target: 443
+      protocol: tcp
+    volumes:
+    - type: bind
+      source: C:\Users\arshh\AppData\Roaming/Microsoft/UserSecrets
+      target: C:\Users\ContainerUser\AppData\Roaming\Microsoft\UserSecrets
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\arshh\AppData\Roaming/ASP.NET/Https
+      target: C:\Users\ContainerUser\AppData\Roaming\ASP.NET\Https
+      read_only: true
+      bind:
+        create_host_path: true
+  photoengiine-api:
+    build:
+      context: .
+      dockerfile: PhotoEngine-API\Dockerfile
+    expose:
+    - "80"
+    image: photoengineapi
+    networks:
+      default: null
+    ports:
+    - mode: ingress
+      target: 80
+      published: 5101
+      protocol: tcp
+networks:
+  default:
+    name: dockercompose18260643133061878462_default

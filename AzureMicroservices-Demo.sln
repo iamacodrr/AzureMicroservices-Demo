@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31606.5
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PhotoEngine-API", "PhotoEngine-API\PhotoEngine-API.csproj", "{8A1A968C-B071-4C34-8978-BB656CDF7266}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API-GatewayEngine", "API-GatewayEngine\API-GatewayEngine.csproj", "{16EE152D-BEA5-4C48-82CE-5902EECD73F7}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "PhotoEngine-FrontEnd", "PhotoEngine-FrontEnd\", "{C50448EB-7F9C-4D87-B7AA-78D6B81BC5F0}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_63101"
+		Debug.AspNetCompiler.PhysicalPath = "PhotoEngine-FrontEnd\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_63101\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_63101"
+		Release.AspNetCompiler.PhysicalPath = "PhotoEngine-FrontEnd\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_63101\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "63101"
+		SlnRelativePath = "PhotoEngine-FrontEnd\"
+	EndProjectSection
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{BBE73420-6A8A-4858-AAD0-53DA0CAF80F7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8A1A968C-B071-4C34-8978-BB656CDF7266}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A1A968C-B071-4C34-8978-BB656CDF7266}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A1A968C-B071-4C34-8978-BB656CDF7266}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A1A968C-B071-4C34-8978-BB656CDF7266}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16EE152D-BEA5-4C48-82CE-5902EECD73F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16EE152D-BEA5-4C48-82CE-5902EECD73F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16EE152D-BEA5-4C48-82CE-5902EECD73F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16EE152D-BEA5-4C48-82CE-5902EECD73F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C50448EB-7F9C-4D87-B7AA-78D6B81BC5F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C50448EB-7F9C-4D87-B7AA-78D6B81BC5F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C50448EB-7F9C-4D87-B7AA-78D6B81BC5F0}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{C50448EB-7F9C-4D87-B7AA-78D6B81BC5F0}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{BBE73420-6A8A-4858-AAD0-53DA0CAF80F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBE73420-6A8A-4858-AAD0-53DA0CAF80F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBE73420-6A8A-4858-AAD0-53DA0CAF80F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBE73420-6A8A-4858-AAD0-53DA0CAF80F7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F63FBF10-55D1-4A0D-920B-F94AB96CF0D9}
+	EndGlobalSection
+EndGlobal
