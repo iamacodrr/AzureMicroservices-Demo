@@ -6,8 +6,8 @@ services:
     environment:
         - gatewayapiurl=http://apigatewayengine
     build:
-      context: .
-      dockerfile: PhotoEngine-FrontEnd/Dockerfile
+      context: PhotoEngine-FrontEnd
+      dockerfile: Dockerfile
     depends_on:
         - api-gatewayengine
     ports:
