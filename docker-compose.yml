@@ -9,7 +9,7 @@ services:
       context: .
       dockerfile: PhotoEngine-FrontEnd\Dockerfile
     depends_on:
-        - apigatewayengine
+        - api-gatewayengine
     ports:
     - "5100:80"
   api-gatewayengine:
@@ -20,7 +20,7 @@ services:
       context: .
       dockerfile: API-GatewayEngine\Dockerfile
     depends_on:
-        - photoengineapi
+        - photoengiine-api
     ports:
     - "5100:80"
   photoengiine-api:
