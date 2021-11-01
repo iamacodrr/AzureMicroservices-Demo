@@ -7,7 +7,7 @@ services:
         - gatewayapiurl=http://apigatewayengine
     build:
       context: .
-      dockerfile: PhotoEngine-FrontEnd\Dockerfile
+      dockerfile: Dockerfile
     depends_on:
         - api-gatewayengine
     ports:
@@ -18,7 +18,7 @@ services:
         - peapiurl=http://photoengineapi
     build:
       context: .
-      dockerfile: API-GatewayEngine\Dockerfile
+      dockerfile: Dockerfile
     depends_on:
         - photoengiine-api
     ports:
@@ -27,7 +27,7 @@ services:
     image: photoengineapi
     build:
         context: .
-        dockerfile: PhotoEngine-API\Dockerfile
+        dockerfile: Dockerfile
     expose:
       - "80"
     ports:
