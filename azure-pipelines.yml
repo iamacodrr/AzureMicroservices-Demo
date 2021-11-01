@@ -21,4 +21,4 @@ steps:
     azureContainerRegistry: '{"loginServer":"registryzero1.azurecr.io", "id" : "/subscriptions/2de30eb6-ccf1-4f0e-95e3-888d38bce35a/resourceGroups/Microservices-Demo/providers/Microsoft.ContainerRegistry/registries/registryzero1"}'
     dockerComposeFile: '**/docker-compose.yml'
     action: 'Run a Docker Compose command'
-    dockerComposeCommand: 'docker compose run'
+    dockerComposeCommand: 'run photoengine-frontend'
