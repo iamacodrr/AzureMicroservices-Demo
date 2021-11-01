@@ -6,7 +6,7 @@ services:
     environment:
         - gatewayapiurl=http://apigatewayengine
     build:
-      context: ./photoengine-frontend
+      context: https://github.com/iamacodrr/AzureMicroservices-Demo/tree/master/PhotoEngine-FrontEnd
       dockerfile: Dockerfile
     depends_on:
         - api-gatewayengine
@@ -17,7 +17,7 @@ services:
     environment:
         - peapiurl=http://photoengineapi
     build:
-      context: ./api-gatewayengine
+      context: https://github.com/iamacodrr/AzureMicroservices-Demo/tree/master/API-GatewayEngine
       dockerfile: Dockerfile
     depends_on:
         - photoengiine-api
@@ -26,7 +26,7 @@ services:
   photoengiine-api:
     image: photoengineapi
     build:
-        context: ./photoengiine-api
+        context: https://github.com/iamacodrr/AzureMicroservices-Demo/tree/master/PhotoEngine-API
         dockerfile: Dockerfile
     expose:
       - "80"
