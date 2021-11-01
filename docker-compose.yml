@@ -6,8 +6,8 @@ services:
     environment:
         - gatewayapiurl=http://apigatewayengine
     build:
-      context: https://github.com/iamacodrr/AzureMicroservices-Demo/tree/master/PhotoEngine-FrontEnd/Dockerfile
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: PhotoEngine-FrontEnd/Dockerfile
     depends_on:
         - api-gatewayengine
     ports:
@@ -17,8 +17,8 @@ services:
     environment:
         - peapiurl=http://photoengineapi
     build:
-      context: https://github.com/iamacodrr/AzureMicroservices-Demo/tree/master/API-GatewayEngine/Dockerfile
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: API-GatewayEngine/Dockerfile
     depends_on:
         - photoengiine-api
     ports:
@@ -26,8 +26,8 @@ services:
   photoengiine-api:
     image: photoengineapi
     build:
-        context: https://github.com/iamacodrr/AzureMicroservices-Demo/tree/master/PhotoEngine-API/Dockerfile
-        dockerfile: Dockerfile
+        context: .
+        dockerfile: PhotoEngine-API/Dockerfile
     expose:
       - "80"
     ports:
