@@ -1,28 +1,6 @@
 version: '3.4'
 
 services:
-  photoengine-frontend:
-    image: photoenginefrontend
-    environment:
-        - gatewayapiurl=http://apigatewayengine
-    build:
-      context: PhotoEngine-FrontEnd
-      dockerfile: Dockerfile
-    depends_on:
-        - api-gatewayengine
-    ports:
-    - "5100:80"
-  api-gatewayengine:
-    image: apigatewayengine
-    environment:
-        - peapiurl=http://photoengineapi
-    build:
-      context: .
-      dockerfile: API-GatewayEngine/Dockerfile
-    depends_on:
-        - photoengiine-api
-    ports:
-    - "5100:80"
   photoengiine-api:
     image: photoengineapi
     build:

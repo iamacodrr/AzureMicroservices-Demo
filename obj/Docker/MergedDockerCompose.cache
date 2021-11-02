@@ -2,14 +2,14 @@ services:
   api-gatewayengine:
     build:
       context: .
-      dockerfile: API-GatewayEngine\Dockerfile
+      dockerfile: API-GatewayEngine/Dockerfile
     depends_on:
-      photoengine-api:
+      photoengiine-api:
         condition: service_started
     environment:
       ASPNETCORE_ENVIRONMENT: Development
       ASPNETCORE_URLS: https://+:443;http://+:80
-      peapiurl: http://photoengine-api
+      peapiurl: http://photoengineapi
     image: apigatewayengine
     networks:
       default: null
@@ -40,7 +40,7 @@ services:
   photoengiine-api:
     build:
       context: .
-      dockerfile: PhotoEngine-API\Dockerfile
+      dockerfile: PhotoEngine-API/Dockerfile
     expose:
     - "80"
     image: photoengineapi
@@ -50,6 +50,23 @@ services:
     - mode: ingress
       target: 80
       published: 5101
+      protocol: tcp
+  photoengine-frontend:
+    build:
+      context: PhotoEngine-FrontEnd
+      dockerfile: Dockerfile
+    depends_on:
+      api-gatewayengine:
+        condition: service_started
+    environment:
+      gatewayapiurl: http://apigatewayengine
+    image: photoenginefrontend
+    networks:
+      default: null
+    ports:
+    - mode: ingress
+      target: 80
+      published: 5100
       protocol: tcp
 networks:
   default:
