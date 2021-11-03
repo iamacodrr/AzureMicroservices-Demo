@@ -1,12 +1,11 @@
 version: '3.4'
 
 services:
-  photoengiine-api:
-    image: photoengineapi
+  photoengine-frontend:
+    image: photoenginefrontend
     build:
-        context: .
-        dockerfile: PhotoEngine-API/Dockerfile
-    expose:
-      - "80"
+      context: PhotoEngine-FrontEnd
+      dockerfile: Dockerfile
     ports:
-      - "5101:80"
+    - "5100:80"
+  
